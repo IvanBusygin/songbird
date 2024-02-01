@@ -1,0 +1,49 @@
+.result {
+  height: 90vh;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__wrapper {
+    padding: 20px;
+    background: rgba(131, 131, 131, 0.65);
+    border-radius: 20px 40px;
+    box-shadow: 5px 5px 20px 10px rgba(54, 40, 11, 0.6);
+
+  }
+
+  &__title {
+    font-size: 2em;
+    @include media-tablet {
+      font-size: 1.5em;
+    }
+  }
+
+  &__text {
+    margin-top: 20px;
+    font-size: 1.4em;
+    @include media-tablet {
+      font-size: 1.2em;
+    }
+  }
+
+  &__btn {
+    width: 50%;
+    margin: 20px auto 10px;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px 20px;
+    font-size: 1.2em;
+    border: 0;
+    transition: background .3s ease;
+    background: rgba(73, 155, 39, 0.8);
+
+    &:hover {
+      background: rgba(40, 134, 0, 0.8);
+    }
+  }
+}

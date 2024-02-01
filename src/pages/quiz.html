@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+</head>
+<body>
+<div class="container">
+  <div class="maim-wrapper">
+    <div class="header">
+      <div class="header-top">
+        <div class="header-top__logo">
+          <a href="index.html"><img class="header-top__img" src="../assets/logo.svg" alt="logo"></a>
+        </div>
+        <div class="header-top__score score">
+          <span class="score__title" data-lng="score">Score:</span>
+          <span class="score__value">0</span>
+        </div>
+      </div>
+      <div class="header__nav">
+        <ul class="menu">
+          <li class="menu__item"><a class="menu__item-link" href="index.html" data-lng="menu1">Приветствие</a></li>
+          <li class="menu__item"><a class="menu__item-link menu__item-link--active" href="quiz.html" data-lng="menu2">Викторина</a></li>
+          <li class="menu__item"><a class="menu__item-link" href="gallery.html" data-lng="menu3">Галерея</a></li>
+        </ul>
+      </div>
+    </div>
+    <ul class="pagination">
+      <li class="pagination__item pagination__item--active" data-lng="pagination1">Разминка</li>
+      <li class="pagination__item" data-lng="pagination2">Воробьиные</li>
+      <li class="pagination__item" data-lng="pagination3">Лесные птицы</li>
+      <li class="pagination__item" data-lng="pagination4">Певчие птицы</li>
+      <li class="pagination__item" data-lng="pagination5">Хищные птицы</li>
+      <li class="pagination__item" data-lng="pagination6">Морские птицы</li>
+    </ul>
+    <div class="question-container"></div>
+    <div class="footer">
+      <span class="footer__year">© 2022</span>
+      <a class="footer__author" href="https://github.com/IvanBusygin">github</a>
+      <a href="https://rs.school/js/"><img class="footer__school" src="../assets/rs_school_js.svg" alt="rs_school logo"></a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

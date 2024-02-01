@@ -1,0 +1,210 @@
+body {
+  background: url("../assets/background.jpg") fixed;
+  background-size: 100% 100%;
+}
+
+.maim-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  &__nav {
+    margin-top: 3px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+
+  &__logo {
+  }
+
+  &__img {
+    height: 80px;
+    
+    @include media-mobile {
+      height: 50px;
+    }
+  }
+
+  &__lang {
+    margin-right: 50px;
+    align-self: flex-end;
+    @include media-mobile {
+      margin-right: 20px;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+  @include media-mobile {
+    gap: 5px;
+  }
+
+  &__item {
+  }
+
+  &__item-link {
+    padding: 10px;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6em;
+    line-height: 140%;
+    color: #FFF;
+    background: linear-gradient(transparent, rgba(0, 157, 118, 0.5));
+    transition: background .5s ease;
+
+    @include media-mobile {
+      font-size: 1.2em;
+      padding: 5px;
+    }
+
+    &:hover {
+      background: rgba(65, 127, 206, 0.8);
+    }
+
+    &--active {
+      background: linear-gradient(transparent, rgba(65, 127, 206, 0.8));
+    }
+  }
+  
+}
+
+.lang {
+  &__btn {
+    background: rgba(0, 157, 118, 0.5);
+    color: #FFF;
+    font-size: 1.4em;
+    cursor: pointer;
+    border: none;
+    transition: background 300ms ease;
+    @include media-mobile {
+      font-size: 1.2em;
+    }
+  }
+
+  &__btn:hover {
+    background: #417FCE;
+  }
+
+  &__btn--active {
+    background: #6694CE;
+  }
+
+  &--ru {
+  }
+
+  &--en {
+  }
+}
+
+.main-content {
+  background: rgba(131, 131, 131, 0.65);
+  color: white;
+  text-align: center;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 30px;
+  box-shadow: 5px 5px 20px 10px rgba(54, 40, 11, 0.6);
+
+  &__h1 {
+    text-align: center;
+    font-size: 30px;
+  }
+
+  &__text {
+    margin: 10px 0;
+    font-size: 1.25em;
+    @include media-mobile {
+      font-size: 1.1em;
+    }
+  }
+}
+
+.bird-grid {
+  margin: auto;
+  padding: 15px;
+  display: grid;
+  grid-gap: 20px;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+
+  @include media-tablet {
+    grid-gap: 10px;
+  }
+  @include media-mobile {
+    padding: 5px;
+    grid-gap: 5px;
+  }
+  @include small-media-mobile {
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    padding: 5px;
+    grid-gap: 10px;
+  }
+
+  &__cell {
+    border-radius: 50%;
+    width: 200px;
+    height: 155px;
+    box-shadow: 5px 5px 20px 10px rgba(54, 40, 11, 0.55);
+    cursor: pointer;
+    transition: 1s ease;
+    
+    @include media-tablet {
+      width: 155px;
+      height: 120px;
+    }
+    
+    @include media-mobile {
+      width: 120px;
+      height: 93px;
+      box-shadow: none;
+    }
+    
+    @include small-media-mobile {
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+
+  &__cell:hover {
+    border-radius: 10px;
+    z-index: 10;
+    transform: scale(1.5);
+    box-shadow: none;
+  }
+}
+
+.footer {
+  background: rgba(255, 255, 255, 0.45);
+  font-size: 20px;
+  color: black;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 30px 30px 0 0;
+
+  &__year {
+  }
+
+  &__author {
+    text-decoration: none;
+    color: #000;
+  }
+
+  &__school {
+    height: 30px;
+  }
+
+  &__school-img {
+  }
+}
